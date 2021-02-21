@@ -1,0 +1,20 @@
+<form action="/platillos<% if (isEditing) { %>/<%= platillo.platillo_id %><% } %>" method="POST">
+
+    <label for="nombre_platillo">Nombre del platillo</label>
+    <input type="text" name="nombre_platillo" id="nombre_platillo" required value="<% if (isEditing) { %><%= platillo.platillo_nombre %><% } %>">
+
+    <label for="descripcion_platillo">Descripción del platillo</label>
+    <textarea name="descripcion_platillo" id="descripcion_platillo" cols="30" rows="10" required><% if (isEditing) { %><%= platillo.platillo_descripcion %><% } %></textarea>
+
+    <label for="precio_platillo">Precio del platillo</label>
+    <input type="number" min="0" step="0.01" name="precio_platillo" id="precio_platillo" required value="<% if (isEditing) { %><%= platillo.platillo_precio %><% } %>">
+
+    <button type="submit">
+        <% if (isEditing) { %>
+            Editar platillo
+        <% } else { %>
+            Crear platillo
+        <% } %>
+    </button>
+
+</form>

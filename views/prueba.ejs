@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <% for (const platillo of platillos) { %>
+            <tr>
+                <td><a href="platillos/<%= platillo.platillo_id %>"><%= platillo.platillo_nombre %></a></td>
+                <td><%= platillo.platillo_precio %></td>
+                <td><a href="/admins/platillos/<%= platillo.platillo_id %>/editar">Editar</a></td>
+                <td>
+                    <form action="/admins/platillos/<%= platillo.platillo_id %>" method="POST">
+                        <button type="submit">Eliminar platillo</button>
+                    </form>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>

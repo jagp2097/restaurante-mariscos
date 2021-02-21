@@ -1,0 +1,600 @@
+/* General */
+body {
+	font-family: 'Tangerine', cursive;
+	background-image: url('../imgs/Background.png');
+	height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header */
+header {
+	background-color: rgba(52, 59, 11, .92);
+}
+
+#logo{
+	margin-top: 10px;
+	margin-left: 38px;
+	margin-bottom: 10px;
+}
+
+
+.menu-bar{
+	margin-top: 55px;
+	margin-left: 60px;
+ 	/*padding-top: 68px; */   /*  arriba, derecha, abajo, izquierda  */
+ }
+
+	.menu-bar a {
+		color: #ffffff;
+		font-size: 35px;
+		font-weight: 900;
+		text-decoration: none; /*subrayado*/
+	}
+
+.menu-list a:hover{
+	color: #ff6633; 
+}
+
+	.menu-list > li:not(:last-child){  /* Selecciona cada elemento li que no es el ultimo hijo*/
+		margin-right: 55px;
+	}
+
+.social-header{
+	margin-top: 59px;
+
+	/*padding-top: 68px;*/
+}
+
+	.social-header a{
+		color: #ffffff;
+	}
+
+	.social-header > li:not(:last-child){
+		margin-right: 20px;
+	}
+
+	.social-header a:hover{
+		color: #ff6633;
+	}
+
+/******** Header-fijo **********/
+
+/*.sticky-header{
+	width: 100%;
+	height: 50px;
+	top: 0;
+	position: fixed;
+	background-color: rgba(52, 59, 11);
+}*/
+
+
+/********* Content ***********/
+
+/* Slider */
+
+.carousel-home{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.carousel-caption{
+	background-color: rgba(52, 59, 11, .75);
+	 left: 25px;
+	 top: 35px;
+     height: 359px;
+	 width: 638px;
+	
+}
+
+	.carousel-caption p{
+		font-size: 40px;
+	}
+
+	.carrousel-caption img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+/* Direcciones */
+
+.cont-sucursalesindex{
+	margin-top: 15px;
+	background-color: #ff6633; 
+	color: #ffffff;
+}
+
+.direcciones{
+	margin-top: 15px;
+	background-color: #ff6633;
+}
+
+	.direcciones p{
+		color: #ffffff;
+		text-align: center;
+		font-size: 28px;
+		font-weight: 700;
+	}
+
+	.direcciones h1{
+		color: #ffffff;
+		text-align: center;
+	}
+
+/* Cuadros de menu, fotos, historia */
+
+.cuadro-platillos{
+	margin-top: 15px; 
+	background-color: transparent; 
+}
+
+	.cuadro-platillos h1{
+		color: #ffffff;
+		text-align: center;
+		background-color: #ff6633; 
+	}
+
+	.cuadro-platillos p{
+		color: #ffffff;
+		text-align: center;
+		font-size: 28px;
+	}
+
+.cartas-platillos{
+	margin-top: 15px;
+}
+
+.card-img-top{
+	height: 158.66px;
+	width: 232px;
+}
+
+.cuadro-historia{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+}
+	
+	.cuadro-historia h3{
+		text-align: center;
+	}
+
+	.cuadro-historia p{
+		font-size: 25px;
+		font-weight: 900;
+	}
+
+.cuadro-fotos{
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+
+}
+
+.card{
+	background-color: rgba(52, 59, 11, .92);
+	box-sizing: border-box;
+    border: 4px solid #ff6633;
+}
+
+.card-body{
+	font-weight: 900;
+	color: #ffffff;
+}
+
+/*********** Footer ***********/
+
+footer {
+	background-color: rgb(52, 59, 11, .92);
+}
+
+	footer p{
+		color: #ffffff;
+		padding-top: 15px;
+		font-size: 25px;
+		font-weight: 900;
+	}
+
+.social-footer{
+	padding-top: 20px;
+	bottom: 0;
+}
+
+	.social-footer a{
+		color: #ffffff;
+	}
+
+	.social-footer a:hover{
+		color: #ff6633;
+	}
+
+
+/*----------------------   Menú  -----------------------*/
+
+#main img{
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out; /* For Safari 3.1 to 6.0 */
+}
+
+#main figcaption{
+	font-size: 12px;
+	color: #ffffff;
+	text-transform: none;
+}
+
+#main figure{
+	box-sizing: border-box;
+    border: 4px solid #ff6633;
+    overflow: hidden;
+}
+
+.titulo-menu{
+	background-color: #ff6633;
+	color: #ffffff;
+	margin-bottom: 15px;
+}
+
+.categorias{
+	font-size: 30px;
+	font-weight: 900;
+}
+
+
+/*----------------Platillos de cada categoria diseño----------------------*/
+.plato-content{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	padding: 12px;
+	background-color: rgba(52, 59, 11, .92);
+	box-sizing: border-box;
+    border: 4px solid #ff6633;
+    border-radius: 4px;
+}
+
+.plato-content h2{
+	font-weight: 900;
+	color: #ffffff;
+}
+
+.plato-content img{
+	border: 2px solid #ffffff;
+    border-radius: 4px;
+}
+
+.plato-content p{
+	font-size: 28px;
+	font-weight: 900;
+	color: #ffffff;
+}
+
+.precio{
+	margin-top: 50px;
+	margin-left: 19px
+}
+
+
+/*----------------------   ¿Donde estamos?  -------------------------------*/
+
+.cont-sucursales{
+	background-color: #ff6633; 
+	color: #ffffff;
+}
+
+
+.sucursal1-direccion{
+	font-size: 25px;
+	font-weight: 900;
+	text-align: center;
+	background-color: rgba(52, 59, 11, .92);
+	padding: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+    border: 4px solid #ff6633;
+}
+	
+	.sucursal1-direccion h2{
+		color: #ffffff;
+		font-weight: 900;
+		text-align: center;
+		
+	}
+
+	.sucursal1-direccion p{
+		font-weight: 900;
+		color: #ffffff;
+	}
+
+.sucursal2-direccion{
+	font-size: 25px;
+	font-weight: 900;
+	text-align: center;
+	background-color: rgba(52, 59, 11, .92);
+	padding: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+	box-sizing: border-box;
+    border: 4px solid #ff6633;
+}
+
+	.sucursal2-direccion h2{
+		color: #ffffff;
+		font-weight: 900;
+		text-align: center;
+		
+	}
+
+	.sucursal2-direccion p{
+		font-weight: 900;
+		color: #ffffff;
+	}
+
+.horarios{
+	background-color: #ff6633;
+	font-weight: 900;
+	color: #ffffff;
+	margin-top: 15px;
+	margin-bottom: 15px; 
+}
+
+	.horarios p{
+		font-size: 28px;
+		font-weight: 900;
+	}
+
+/************************   Sugerencias    *************************/
+
+.cont-sugerencias{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 12px;
+	border-radius: 15px;
+	background-color: rgba(52, 59, 11, .92);
+}
+
+	.cont-sugerencias h1{
+		font-weight: 900;
+		color: #ffffff;
+	}
+
+	.cont-sugerencias p{
+		font-size: 30px;
+		font-weight: 900;
+		color: #ffffff;
+	}
+
+#lbnombre{
+	font-size: 25px;
+	padding-bottom: 1px;
+}
+
+#lbapellidos{
+	font-size: 25px;
+	padding-bottom: 1px;
+}
+
+#lbtextarea{
+	font-size: 28px;
+	padding-bottom: 1px;
+}
+
+#nombre{
+	width: 240px;
+	height: 30px;
+	padding: 8px 10px;
+	font-family: Arial;
+	font-size: 15px;
+
+}
+
+#apellidos{
+	width: 240px;
+	height: 30px;
+	padding: 8px 10px;
+	font-family: Arial;
+	font-size: 15px;
+}
+
+input[type=text]{
+	box-sizing: border-box;
+    border: 2px solid #ff6633;
+    border-radius: 4px;
+
+}
+
+#sugerencia{
+    width: 370px;
+    height: 110px;
+    padding: 10px 12px;
+    font-family: Arial;
+    font-size: 15px;
+    border: 2px solid #ff6633;
+    resize: none;
+}
+
+input[type=text]:focus {
+     border: 3px solid #ff6633;
+}
+
+input[type=submit]{
+	background-color: #ff6633;
+	border: none;
+	border-radius: 5px;
+	font-size: 29px;
+	font-weight: 900;
+	color: #ffffff;
+	cursor: pointer;
+	margin: 15px 18px;
+	width: 115px;
+}
+
+input[type=submit]:hover{
+	color: rgba(52, 59, 11, .92);
+}
+
+input[type=button]{
+	background-color: #ff6633;
+	border: none;
+	border-radius: 5px;
+	font-size: 25px;
+	font-weight: 900;
+	color: #ffffff;
+	cursor: pointer;
+	margin: 15px 18px;
+	width: 155px;
+}
+
+input[type=button]:hover{
+	color: rgba(52, 59, 11, .92);
+}
+
+.overlay1{
+	position: absolute;
+	top: 3px;
+	bottom: 0;
+	left: 18px;
+	right: 0;
+	height: 94%;
+	width: 94%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(52, 59, 11, .92); 
+}
+
+.overlay2{
+	position: absolute;
+	top: 3px;
+	bottom: 0;
+	left: 18px;
+	right: 0;
+	height: 94%;
+	width: 94%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(52, 59, 11, .92); 
+}
+
+.overlay3{
+	position: absolute;
+	top: 3px;
+	bottom: 0;
+	left: 18px;
+	right: 0;
+	height: 94%;
+	width: 94%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(52, 59, 11, .92); 
+}
+
+.overlay4{
+	position: absolute;
+	top: 3px;
+	bottom: 0;
+	left: 18px;
+	right: 0;
+	height: 94%;
+	width: 94%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgba(52, 59, 11, .92); 
+}
+
+.cont-plts1:hover .overlay1{
+	opacity: 1;
+}
+
+.cont-plts2:hover .overlay2{
+	opacity: 1;
+}
+
+.cont-plts3:hover .overlay3{
+	opacity: 1;
+}
+
+.cont-plts4:hover .overlay4{
+	opacity: 1;
+}
+
+.text1{
+	 font-size: 45px;
+	 font-weight:900;
+	 text-transform: none;
+	 text-align:center; 
+	 color:white; 
+	 display:block; 
+	 padding: 0 15px;
+	 position:absolute;
+	 top:40%; 
+	 width:100%;
+}
+
+	.text1:hover{
+		color: #ff6633;
+		text-decoration: none;
+	}
+
+.text2{
+	 font-size: 45px;
+	 font-weight:900;
+	 text-transform: none;
+	 text-align:center; 
+	 color:white; 
+	 display:block; 
+	 padding: 0 15px;
+	 position:absolute;
+	 top:40%; 
+	 width:100%;
+}
+
+	.text2:hover{
+		color: #ff6633;
+		text-decoration: none;
+	}
+
+.text3{
+	 font-size: 45px;
+	 font-weight:900;
+	 text-transform: none;
+	 text-align:center; 
+	 color:white; 
+	 display:block; 
+	 padding: 0 15px;
+	 position:absolute;
+	 top:40%; 
+	 width:100%;
+}
+
+	.text3:hover{
+		color: #ff6633;
+		text-decoration: none;
+	}
+
+.text4{
+	 font-size: 45px;
+	 font-weight:900;
+	 text-transform: none;
+	 text-align:center; 
+	 color:white; 
+	 display:block; 
+	 padding: 0 15px;
+	 position:absolute;
+	 top:40%; 
+	 width:100%;
+}
+
+	.text4:hover{
+		color: #ff6633;
+		text-decoration: none;
+	}
+
+/*.img-fluid{
+	box-sizing: border-box;
+    border: 4px solid #ff6633;
+}*/
+
+
