@@ -2,21 +2,29 @@ const Platillo = require('../models/Platillo');
 const sequelizeInstance = require('../config/app');
 let transaction;
 
-const index = async (req, res, next) => {
+const suffle = arr => {
+    for (let i = arr.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i);
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    return arr;
+};
 
+const index = async (req, res, next) => {
     try {
         const platillos = await Platillo.findAll();
+        platillos = suffle(platillos);
         res.render('prueba', {
-            platillos: platillos
+            platillos: platillos.slice(0, 5)
         });
     } catch (err) {
         console.error(`Error: ${err}`);
     }
-
 };
 
 const showPlatillo = async (req, res, next) => {
-
     try {
         const platillo = await Platillo.findOne({
             where: {
@@ -34,7 +42,6 @@ const showPlatillo = async (req, res, next) => {
     } catch (err) {
         console.error(`Error: ${err}`);
     }
-
 };
 
 const createPlatillo = (req, res, next) => {
@@ -98,7 +105,7 @@ const updatePlatillo = async (req, res, next) => {
         const precioPlatillo = parseFloat(req.body.precio_platillo);
         const platilloId = req.params.platilloId;
 
-        const platillo = await Platillo.update({
+        await Platillo.update({
             platillo_nombre: nombrePlatillo,
             platillo_descripcion: descripcionPlatillo,
             platillo_precio: precioPlatillo
@@ -123,7 +130,7 @@ const deletePlatillo = async (req, res, next) => {
     try {
         transaction = await sequelizeInstance.transaction();
         const platilloId = req.params.platilloId;
-        const platillo = await Platillo.destroy({
+        await Platillo.destroy({
             where: {
                 platillo_id: platilloId
             }, 

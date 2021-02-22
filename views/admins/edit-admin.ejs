@@ -1,0 +1,16 @@
+<form action="/admins<% if (isEditing) { %>/<%= admin.admin_id %><% } %>" method="post">
+    <label for="admin_username">Nombre de usuario</label>
+    <input type="text" id="admin_username" name="admin_username" required value="<% if (isEditing) { %><%= admin.admin_username %><% } %>">
+
+    <label for="admin_password">Contraseña</label>
+    <input type="password" id="admin_password" name="admin_password" minlength="8" required>
+
+    <button type="submit">
+        <% if (isEditing) { %>
+            Editar
+        <% } else { %>
+            Crear nuevo administrador
+        <% } %>
+    </button>
+
+</form>

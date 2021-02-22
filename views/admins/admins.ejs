@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Username</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <% for (const admin of admins) { %>
+            <tr>
+                <td><%= admin.admin_id %></td>
+                <td><%= admin.admin_username %></td>
+                <td><a href="/admins/<%= admin.admin_id %>/editar">Cambiar Contraseña</a></td>
+                <td>
+                    <form action="/admins/<%= admin.admin_id %>/eliminar" method="POST">
+                        <button type="submit">Eliminar admin</button>
+                    </form>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>

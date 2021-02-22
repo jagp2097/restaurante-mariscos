@@ -3,13 +3,13 @@ const sequelizeInstance = require('../config/app');
 const bcrypt = require('bcrypt');
 
 class Admin extends Model {
-    adminUsername = '';
-    adminPassword = '';
+    // adminUsername = '';
+    // adminPassword = '';
 
-    constructor(adminUsername, adminPassword) {
-        this.adminUsername = adminUsername;
-        this.adminPassword = adminPassword;
-    }
+    // constructor(adminUsername, adminPassword) {
+    //     this.adminUsername = adminUsername;
+    //     this.adminPassword = adminPassword;
+    // }
 
     async verifyPassword(plainPassword, hashedPassword) {
         return await bcrypt.compare(plainPassword, hashedPassword);
@@ -50,13 +50,13 @@ Admin.init({
 
 // Hooks
 Admin.beforeCreate(async (admin, options) => {
-    const hashedPassword = await encryptPassword(admin.password);
-    admin.password = hashedPassword;
+    const hashedPassword = await encryptPassword(admin.admin_password);
+    admin.admin_password = hashedPassword;
 });
 
 Admin.beforeBulkUpdate(async options => {
-    const hashedPassword = await encryptPassword(options.attributes.password);
-    options.attributes.password = hashedPassword;
+    const hashedPassword = await encryptPassword(options.attributes.admin_password);
+    options.attributes.admin_password = hashedPassword;
 })
 
 const encryptPassword = async (password) => {

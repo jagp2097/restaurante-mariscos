@@ -13,20 +13,17 @@ app.set('views', 'views');
 
 // Rutas que accedera el usuario
 const platillosRoutes = require('./routes/PlatillosRoutes');
+const adminsRoutes = require('./routes/AdminsRoutes');
 
 // servir los archivos estaticamente
 app.use(express.static(path.join(path.dirname(require.main.filename), 'public')));
 
-app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+// for parsing application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
 
-const init = () => {
+// Permitimos a la aplicación el acceso a las rutas 
+app.use(platillosRoutes);
+app.use(adminsRoutes);
 
-    // Permitimos a la aplicación el acceso a las rutas 
-    app.use(platillosRoutes);
-
-    // Puerto donde estará escuchando la aplicación
-    app.listen(3000);
-
-};
-
-init();
+// Puerto donde estará escuchando la aplicación
+app.listen(3000);
